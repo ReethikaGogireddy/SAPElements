@@ -10,7 +10,7 @@
 	height="100%">
 	<Page id="page" title="Travel Destinations">
 		<ScrollContainer id="menu" vertical="true" height="auto">
-			<tnt:ToolHeader id="shellLikeToolHeaderOnlyMandatoryControls">
+			<tnt:ToolHeader id="shellLikeToolHeaderOnlyMandatoryControls" class="sapUiMediumMarginBottom">
 				<Title text="Product Name" wrapping="false">
 					<layoutData>
 						<OverflowToolbarLayoutData priority="Disappear"/>
@@ -25,20 +25,41 @@
 			</tnt:ToolHeader>
 		</ScrollContainer>
 
-		<Button text="Button"
-				press="onPress">
-		</Button>
+		<VBox spacing="1rem" class="sapUiMediumMarginTop">
+			<Button text="Button" class="button"
+					press="onPress" />
 
-		<Title id="carouselTitle"
-			text="Carousel with Display Options"/>
-		<HBox justifyContent="Center" renderType="Bare">
-			<Panel id="carouselContainer" height="500px" backgroundDesign="Transparent">
-				<Carousel id="carouselSample"  loop="true">
-					<customLayout>
-						<CarouselLayout/>
-					</customLayout>
-				</Carousel>
-			</Panel>
-		</HBox>
+			<Popover
+				id="popoverCommand"
+				title="Popover"
+				class="sapUiContentPadding">
+				<dependents>
+					<core:CommandExecution id="CE_SAVE_POPOVER" enabled="true" command="Save" execute=".onSave" />
+				</dependents>
+				<footer>
+					<Toolbar>
+						<Button text="Delete" press="cmd:Delete" enabled="{$cmd>Delete/enabled}" />
+						<ToolbarSpacer/>
+						<Button text="Save" press="cmd:Save" enabled="{$cmd>Save/enabled}" />
+					</Toolbar>
+				</footer>
+				<Input value="{viewModel>/value}" />
+			</Popover>
+			<Panel headerText="Popover-With Input">
+				<Button press=".onCommandPopoverOpen" text="Open Popover" ariaHasPopup="Dialog" />
+				</Panel>
+
+			<Title id="carouselTitle"
+				text="Carousel with Display Options" class="sapUiMediumMarginTop" />
+			<HBox justifyContent="Center" renderType="Bare" class="sapUiMediumMarginTop">
+				<Panel id="carouselContainer" height="500px" backgroundDesign="Transparent">
+					<Carousel id="carouselSample" loop="true">
+						<customLayout>
+							<CarouselLayout/>
+						</customLayout>
+					</Carousel>
+				</Panel>
+			</HBox>
+		</VBox>
 	</Page>
 </mvc:View>

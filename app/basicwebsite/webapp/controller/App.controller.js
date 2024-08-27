@@ -5,7 +5,8 @@ sap.ui.define([
     "sap/m/library",
     "sap/ui/model/json/JSONModel",
     "sap/m/Image",
-], function (Controller, MessageToast, Device,library, JSONModel,Image) {
+    "sap/base/Log",
+], function (Controller, MessageToast, Device,library, JSONModel,Image,Log) {
     "use strict";
 
     return Controller.extend("basicwebsite.controller.App", {
@@ -51,6 +52,21 @@ sap.ui.define([
 					decorative: false
 				}));
 			}
+		},
+        onPopoverOpen: function(oEvent) {
+			this.byId("popover").openBy(oEvent.getSource());
+		},
+
+		onCommandPopoverOpen: function(oEvent) {
+			this.byId("popoverCommand").openBy(oEvent.getSource());
+		},
+        onTogglePopoverSave: function(oEvent)  {
+			this.getView().byId("CE_SAVE_POPOVER").setEnabled(oEvent.getParameter("state"));
+		},
+
+
+		onDelete: function () {
+			MessageToast.show("CTRL+D: Delete triggered on controller");
 		},
 
     });
