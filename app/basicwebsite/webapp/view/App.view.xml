@@ -28,6 +28,17 @@
 		<VBox spacing="1rem" class="sapUiMediumMarginTop">
 			<Button text="Button" class="button"
 					press="onPress" />
+            
+					<Label text = "Regular mode button"/>
+					<MenuButton text="File">
+						<menu>
+							<Menu itemSelected="onMenuAction">
+								<MenuItem text="Edit" icon="sap-icon://edit" />
+								<MenuItem text="Save" icon="sap-icon://save" />
+								<MenuItem text="Open" icon="sap-icon://open-folder" />
+							</Menu>
+						</menu>
+					</MenuButton>
 
 			<Popover
 				id="popoverCommand"

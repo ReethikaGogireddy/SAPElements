@@ -6,7 +6,8 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
     "sap/m/Image",
     "sap/base/Log",
-], function (Controller, MessageToast, Device,library, JSONModel,Image,Log) {
+    "sap/m/MenuItem"
+], function (Controller, MessageToast, Device,library, JSONModel,Image,Log,MenuItem) {
     "use strict";
 
     return Controller.extend("basicwebsite.controller.App", {
@@ -68,6 +69,19 @@ sap.ui.define([
 		onDelete: function () {
 			MessageToast.show("CTRL+D: Delete triggered on controller");
 		},
+        onMenuAction: function(oEvent) {
+            var oItem = oEvent.getParameter("item"),
+                sItemPath = "";
+
+            while (oItem instanceof MenuItem) {
+                sItemPath = oItem.getText() + " > " + sItemPath;
+                oItem = oItem.getParent();
+            }
+
+            sItemPath = sItemPath.substr(0, sItemPath.lastIndexOf(" > "));
+
+            MessageToast.show("Action triggered on item: " + sItemPath);
+        }
 
     });
 });
