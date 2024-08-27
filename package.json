@@ -16,7 +16,8 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-sample": "cds watch --open sample/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-sample": "cds watch --open sample/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-basicwebsite": "cds watch --open basicwebsite/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "fiori": {

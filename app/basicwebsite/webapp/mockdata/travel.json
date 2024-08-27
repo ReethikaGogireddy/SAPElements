@@ -1,0 +1,107 @@
+{
+   "results": [
+        {
+          "DestinationID": 1,
+          "Name": "Paris",
+          "Country": "France",
+          "Region": "Île-de-France",
+          "Description": "The capital city of France, known for the Eiffel Tower, museums, and cafes.",
+          "AverageTemperature": 12.5,
+          "BestTimeToVisit": "April to June, September to November"
+        },
+        {
+          "DestinationID": 2,
+          "Name": "Tokyo",
+          "Country": "Japan",
+          "Region": "Kanto",
+          "Description": "Japan's bustling capital, famous for its skyscrapers, shopping, and traditional temples.",
+          "AverageTemperature": 15.2,
+          "BestTimeToVisit": "March to May, September to November"
+        },
+        {
+          "DestinationID": 3,
+          "Name": "New York City",
+          "Country": "United States",
+          "Region": "New York",
+          "Description": "The largest city in the USA, known for the Statue of Liberty, Times Square, and Central Park.",
+          "AverageTemperature": 13.3,
+          "BestTimeToVisit": "April to June, September to early November"
+        },
+        {
+          "DestinationID": 4,
+          "Name": "Sydney",
+          "Country": "Australia",
+          "Region": "New South Wales",
+          "Description": "Famous for the Sydney Opera House, Harbour Bridge, and beautiful beaches.",
+          "AverageTemperature": 18.6,
+          "BestTimeToVisit": "September to November, March to May"
+        },
+        {
+          "DestinationID": 5,
+          "Name": "Rome",
+          "Country": "Italy",
+          "Region": "Lazio",
+          "Description": "The capital of Italy, rich in history and architecture like the Colosseum and Vatican City.",
+          "AverageTemperature": 15.1,
+          "BestTimeToVisit": "April to June, late September to October"
+        },
+        {
+          "DestinationID": 6,
+          "Name": "Cape Town",
+          "Country": "South Africa",
+          "Region": "Western Cape",
+          "Description": "Known for Table Mountain, beaches, and vibrant culture.",
+          "AverageTemperature": 17.0,
+          "BestTimeToVisit": "March to May, September to November"
+        },
+        {
+          "DestinationID": 7,
+          "Name": "Rio de Janeiro",
+          "Country": "Brazil",
+          "Region": "Rio de Janeiro",
+          "Description": "Famous for its Carnival festival, Copacabana beach, and the Christ the Redeemer statue.",
+          "AverageTemperature": 23.3,
+          "BestTimeToVisit": "December to March"
+        },
+        {
+          "DestinationID": 8,
+          "Name": "Bangkok",
+          "Country": "Thailand",
+          "Region": "Central Thailand",
+          "Description": "Thailand's capital, known for ornate temples, vibrant street life, and cultural landmarks.",
+          "AverageTemperature": 29.0,
+          "BestTimeToVisit": "November to February"
+        },
+        {
+          "DestinationID": 9,
+          "Name": "Dubai",
+          "Country": "United Arab Emirates",
+          "Region": "Dubai",
+          "Description": "Known for luxury shopping, ultramodern architecture, and a lively nightlife scene.",
+          "AverageTemperature": 27.3,
+          "BestTimeToVisit": "November to March"
+        },
+        {
+          "DestinationID": 10,
+          "Name": "Istanbul",
+          "Country": "Turkey",
+          "Region": "Marmara",
+          "Description": "A city that straddles Europe and Asia, known for historic sites like Hagia Sophia and the Blue Mosque.",
+          "AverageTemperature": 14.8,
+          "BestTimeToVisit": "April to May, September to November"
+        }
+      ],
+      "images": [
+		"https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/bigimgs/273303_low_jpg_srgb.jpg",
+		"https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/bigimgs/273537_low_jpg_srgb.jpg",
+		"https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/bigimgs/274731_high_jpg_eci_rgb.jpg",
+		"https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-1603.jpg",
+		"https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-2002.jpg",
+		"https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-2020.jpg",
+		"https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-2025.jpg",
+		"https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-2026.jpg",
+		"https://sdk.openui5.org/test-resources/sap/ui/documentation/sdk/images/HT-2027.jpg"
+	]
+    
+  }
+  

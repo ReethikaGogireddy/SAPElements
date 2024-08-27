@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices m:DataServiceVersion="2.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <Schema Namespace="TravelService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      
+      <!-- Entity Type for Travel Destination -->
+      <EntityType Name="TravelDestination">
+        <Key>
+          <PropertyRef Name="DestinationID"/>
+        </Key>
+        <Property Name="DestinationID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100"/>
+        <Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="100"/>
+        <Property Name="Region" Type="Edm.String" MaxLength="100"/>
+        <Property Name="Description" Type="Edm.String" MaxLength="500"/>
+        <Property Name="AverageTemperature" Type="Edm.Decimal" Precision="5" Scale="2"/>
+        <Property Name="BestTimeToVisit" Type="Edm.String" MaxLength="100"/>
+      </EntityType>
+
+      <!-- Entity Container to hold the Entity Sets -->
+      <EntityContainer Name="TravelServiceContainer">
+        <EntitySet Name="TravelDestinations" EntityType="TravelService.TravelDestination"/>
+      </EntityContainer>
+      
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
