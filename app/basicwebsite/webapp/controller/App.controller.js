@@ -16,6 +16,8 @@ sap.ui.define([
 			this.getView().setModel(oImgModel, "img");
 
 			this._setNumberOfImagesInCarousel(5);
+			var oModel = new JSONModel(sap.ui.require.toUrl("sap/ui/demo/mock/Tree.json"));
+			this.getView().setModel(oModel);
         },
         onButtonPress: function(oEvent) {
             var oButton = oEvent.getSource();
