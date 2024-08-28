@@ -10,11 +10,11 @@
 	height="100%">
 	<Page id="page" title="Travel Destinations">
 		<ScrollContainer id="menu" vertical="true" height="auto">
-			<tnt:ToolHeader id="shellLikeToolHeaderOnlyMandatoryControls" class="sapUiMediumMarginBottom">
+			<tnt:ToolHeader id="shellLikeToolHeaderOnlyMandatoryControls">
 				<Title text="Product Name" wrapping="false">
-					<layoutData>
+					<!-- <layoutData>
 						<OverflowToolbarLayoutData priority="Disappear"/>
-					</layoutData>
+					</layoutData> -->
 				</Title>
 				<ToolbarSpacer />
 				<Avatar src="sample.png" displaySize="XS" press=".onAvatarPressed" tooltip="Profile">
@@ -39,6 +39,13 @@
 							</Menu>
 						</menu>
 					</MenuButton>
+					<HBox>
+						<Switch state="true">
+							<layoutData>
+								<FlexItemData growFactor="1" />
+							</layoutData>
+						</Switch>
+					</HBox>
 
 			<Popover
 				id="popoverCommand"
@@ -71,6 +78,45 @@
 					</Carousel>
 				</Panel>
 			</HBox>
+			<HBox>
+				<Switch state="true">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Switch>
+				<Switch state="false">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Switch>
+				<Switch state="true" enabled="false">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Switch>
+			</HBox>
+		</VBox>
+		<VBox class="sapUiSmallMargin">
+			<Label text="Default RadioButton use" labelFor="GroupA" />
+			<RadioButtonGroup id="GroupA">
+				<RadioButton text="Option 1" selected="true" />
+				<RadioButton text="Option 2" />
+				<RadioButton text="Option 3" />
+				<RadioButton text="Option 4" />
+				<RadioButton text="Option 5" />
+			</RadioButtonGroup>
+		</VBox>
+		<VBox >
+			<Text text="Slider" class="sapUiSmallMarginBottom"/>
+			<Slider value="30" width="90%" class="sapUiSmallMarginBottom" />
+		</VBox>
+		<VBox>
+		<CheckBox text="Option a" selected="true" />
+		<CheckBox text="Option b" />
+		<CheckBox text="Option c" selected="true" />
+		<CheckBox text="Option d" />
+		<CheckBox text="Option e" enabled="false" />
+		<CheckBox text="Option partially selected" selected="true" partiallySelected="true" />
 		</VBox>
 	</Page>
 </mvc:View>
