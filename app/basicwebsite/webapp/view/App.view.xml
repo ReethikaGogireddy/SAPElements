@@ -24,6 +24,14 @@
 				</Avatar>
 			</tnt:ToolHeader>
 		</ScrollContainer>
+		<IconTabHeader mode="Inline">
+			<items>
+				<IconTabFilter key="info" text="Info" />
+				<IconTabFilter key="attachments" text="Attachments" count="3" />
+				<IconTabFilter key="notes" text="Notes" count="12" />
+				<IconTabFilter key="people" text="People"/>
+			</items>
+		</IconTabHeader>
 
 		<VBox spacing="1rem" class="sapUiMediumMarginTop">
 			<Button text="Button" class="button"
