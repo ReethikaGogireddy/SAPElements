@@ -54,6 +54,10 @@
 							</layoutData>
 						</Switch>
 					</HBox>
+					<GenericTag text="Project Cost" design="StatusIconHidden" status="Error"  class="sapUiSmallMarginBottom">
+						<ObjectNumber state="Error" emphasized="false" number="3.5M" unit="EUR"/>
+					</GenericTag>
+	
 
 			<Popover
 				id="popoverCommand"
