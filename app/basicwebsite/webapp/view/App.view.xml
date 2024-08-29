@@ -57,7 +57,13 @@
 					<GenericTag text="Project Cost" design="StatusIconHidden" status="Error"  class="sapUiSmallMarginBottom">
 						<ObjectNumber state="Error" emphasized="false" number="3.5M" unit="EUR"/>
 					</GenericTag>
-	
+					<BusyIndicator size="1.5em" />
+					<Button
+					text="Message Dialog"
+					width="230px"
+					press=".onDefaultMessageDialogPress"
+					class="sapUiSmallMarginBottom"
+					ariaHasPopup="Dialog" />
 
 			<Popover
 				id="popoverCommand"
