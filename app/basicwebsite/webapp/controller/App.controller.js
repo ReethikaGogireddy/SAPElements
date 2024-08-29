@@ -6,8 +6,11 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel",
     "sap/m/Image",
     "sap/base/Log",
-    "sap/m/MenuItem"
-], function (Controller, MessageToast, Device,library, JSONModel,Image,Log,MenuItem) {
+    "sap/m/MenuItem",
+	"sap/m/Dialog",
+	"sap/m/Button",
+	"sap/m/Text"
+], function (Controller, MessageToast, Device,library, JSONModel,Image,Log,MenuItem,Dialog,Button,Text) {
     "use strict";
 
     return Controller.extend("basicwebsite.controller.App", {
@@ -19,6 +22,24 @@ sap.ui.define([
 			var oModel = new JSONModel(sap.ui.require.toUrl("sap/ui/demo/mock/Tree.json"));
 			this.getView().setModel(oModel);
         },
+		onDefaultMessageDialogPress: function () {
+			if (!this.oDefaultMessageDialog) {
+				this.oDefaultMessageDialog = new Dialog({
+					type: DialogType.Message,
+					title: "Default Message",
+					content: new Text({ text: "Build enterprise-ready web applications, responsive to all devices and running on the browser of your choice. That's OpenUI5." }),
+					beginButton: new Button({
+						type: ButtonType.Emphasized,
+						text: "OK",
+						press: function () {
+							this.oDefaultMessageDialog.close();
+						}.bind(this)
+					})
+				});
+			}
+
+			this.oDefaultMessageDialog.open();
+		},
         onButtonPress: function(oEvent) {
             var oButton = oEvent.getSource();
             this.byId("actionSheet").openBy(oButton);
