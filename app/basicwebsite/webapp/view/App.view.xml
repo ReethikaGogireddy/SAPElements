@@ -114,6 +114,12 @@
 				</Switch>
 			</HBox>
 		</VBox>
+		<subHeader>
+			<Toolbar>
+				<SearchField width="100%" search=".onSearch" />
+				<Text text="Default Search" id="idSearchListToolbar" />
+			</Toolbar>
+		</subHeader>
 		<VBox class="sapUiSmallMargin">
 			<Label text="Default RadioButton use" labelFor="GroupA" />
 			<RadioButtonGroup id="GroupA">
